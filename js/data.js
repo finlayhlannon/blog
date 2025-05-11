@@ -29,6 +29,20 @@ const blogData = [
     isFeatured: false,
     tags: ["running", "fitness", "tc10k", "race"],
   },
+  {
+    id: "phtography",
+    title: "Recent Phtography Adventures",
+    slug: "photography",
+    category: "HOBBIES",
+    date: new Date("2025-04-30"),
+    image: "static/img/highjump.png",
+    excerpt: "View a showcase of my recent photos as well as the stories behind them.",
+    content: `
+        <p></p>
+    `,
+    isFeatured: false,
+    tags: ["photography", "track", "hobbies", "camera"],
+  },
   
 ]
 
