@@ -444,6 +444,17 @@ footer {
     padding: 0 20px; /* Add some padding for smaller screens */
     margin-top: -100px;
   }
+  .catagory-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 20vh; /* Full screen height */
+    font-weight: bold; /* Heavier font */
+    font-size: 1.5rem; /* Adjust font size for readability */
+    padding: 0 20px; /* Add some padding for smaller screens */
+    margin-top: 0px;
+  }
   /* Header */
   header {
     flex-direction: column;
@@ -497,8 +508,9 @@ footer {
     gap: 20px;
     
   }
-
-  .featured-section,
+  .featured-section {
+    display: none;
+  }
   .recent-section {
     width: 100%; /* Full width for each section */
   }
