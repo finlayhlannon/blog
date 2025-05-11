@@ -21,7 +21,7 @@ const blogData = [
     slug: "tc-10k",
     category: "ATHLETICS",
     date: new Date("2025-04-27"),
-    image: "static/img/tc10k2.jpg",
+    image: "static/img/tc10k4.png",
     excerpt: "36th Annual Times Colonist 10k - My 2nd time running the TC10k, and my first time going sub 40 officially with a time of 39:19",
     content: `
         <p></p>
