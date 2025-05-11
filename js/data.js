@@ -38,7 +38,7 @@ const blogData = [
     image: "static/img/highjump.png",
     excerpt: "View a showcase of my recent photos as well as the stories behind them.",
     content: `
-        <p></p>
+        <p><img src="static/img/polevault.png" alt="Photo 1" width="500px"></p>
     `,
     isFeatured: false,
     tags: ["photography", "track", "hobbies", "camera"],
