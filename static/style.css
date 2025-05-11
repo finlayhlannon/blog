@@ -1,0 +1,619 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  color: #000;
+  background-color: #fff;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Header styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 100;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 40px;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 25px;
+}
+
+nav ul li a {
+  font-weight: 500;
+  position: relative;
+}
+
+nav ul li a:hover {
+  opacity: 0.7;
+}
+
+nav ul li a.active::after,
+nav ul li a:hover::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.subscribe-btn {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.subscribe-btn:hover {
+  background-color: #333;
+}
+
+/* Main content styles */
+main {
+  padding: 40px 10%;
+  min-height: 70vh;
+}
+
+.welcome-section {
+  text-align: left; /* Align text to the left */
+  margin-bottom: 50px;
+}
+
+.welcome-section h2 {
+  font-size: 50px;
+  font-weight: 500;
+  max-width: 800px;
+  margin: 0 0 20px 0; /* Remove auto centering */
+}
+
+.separator {
+  height: 1px;
+  background-color: #000;
+  width: 100%;
+  margin: 15px 0;
+}
+
+.welcome-section .separator {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/* Blog container layout */
+.blog-container {
+  display: flex;
+  gap: 40px;
+}
+
+.featured-section {
+  flex: 1; /* Equal width with recent section */
+}
+
+.recent-section {
+  flex: 1; /* Equal width with featured section */
+}
+
+.featured-section h3,
+.recent-section h3 {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+/* Blog cards */
+.featured-blogs {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.recent-blogs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 30px;
+}
+
+.blog-card {
+  transition: all 0.3s ease;
+  padding: 0;
+  cursor: pointer;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  padding: 15px;
+  margin: -15px;
+  background-color: #fff;
+}
+
+.blog-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  background-color: #f0f0f0;
+}
+
+.blog-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.blog-category {
+  font-weight: 600;
+}
+
+.blog-date {
+  color: #333;
+}
+
+.blog-title {
+  font-size: 22px;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.blog-excerpt {
+  color: #555;
+  font-size: 16px;
+}
+
+/* Make featured blog cards larger than recent ones */
+.featured .blog-image img {
+  height: 400px; /* Taller image for featured */
+}
+
+.recent .blog-image img {
+  height: 200px; /* Shorter image for recent */
+}
+
+.featured .blog-title {
+  font-size: 28px;
+  line-height: 1.3;
+}
+
+.recent .blog-title {
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+.featured .blog-excerpt {
+  font-size: 16px;
+}
+
+.recent .blog-excerpt {
+  font-size: 14px;
+}
+
+/* Category page styles */
+.category-page {
+  padding: 20px 0;
+}
+
+.category-title {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.category-blogs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* Blog post page styles */
+.blog-post {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.blog-post-header {
+  margin-bottom: 30px;
+}
+
+.blog-post-header .blog-title {
+  font-size: 36px;
+  line-height: 1.2;
+  margin: 15px 0;
+}
+
+.blog-post-image {
+  margin-bottom: 30px;
+}
+
+.blog-post-image img {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+}
+
+.blog-post-content {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.blog-post-content p {
+  margin-bottom: 20px;
+}
+
+.blog-post-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.blog-post-tags {
+  display: flex;
+  gap: 10px;
+}
+
+.blog-post-tags span {
+  background-color: #f0f0f0;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.share-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.share-buttons button {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.share-buttons button:hover {
+  background-color: #e0e0e0;
+}
+
+/* Footer styles */
+footer {
+  background-color: #f8f8f8;
+  padding: 50px 10% 20px;
+  margin-top: 50px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.footer-left {
+  flex: 1;
+}
+
+.footer-left h3 {
+  margin-bottom: 15px;
+}
+
+.footer-right {
+  flex: 2;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-links h4,
+.footer-subscribe h4 {
+  margin-bottom: 15px;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .blog-container {
+    flex-direction: column;
+  }
+
+  .featured-blogs {
+    display: block;
+  }
+
+  .category-blogs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-left {
+    margin-bottom: 15px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    margin-bottom: 15px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+  }
+
+  nav ul li {
+    margin-bottom: 10px;
+  }
+
+  .header-right {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .recent-blogs {
+    grid-template-columns: 1fr;
+  }
+
+  .category-blogs {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-left {
+    margin-bottom: 30px;
+  }
+
+  .footer-right {
+    flex-direction: column;
+  }
+
+  .footer-links {
+    margin-bottom: 30px;
+  }
+}
+
+/* General mobile styles */
+@media (max-width: 768px) {
+  /* Header */
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 5%;
+  }
+
+  .header-left {
+    margin-bottom: 15px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    margin-bottom: 15px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+  }
+
+  nav ul li {
+    margin-bottom: 10px;
+  }
+
+  .header-right {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  /* Welcome Section */
+  .welcome-section h2 {
+    font-size: 24px; /* Smaller font size for mobile */
+    line-height: 1.4;
+    max-width: 100%; /* Remove width restriction */
+  }
+
+  .welcome-section .separator {
+    width: 100%; /* Full width separator */
+    margin: 15px 0;
+  }
+
+  /* Blog Container */
+  .blog-container {
+    flex-direction: column; /* Stack sections vertically */
+    gap: 20px;
+  }
+
+  .featured-section,
+  .recent-section {
+    width: 100%; /* Full width for each section */
+  }
+
+  /* Blog Cards */
+  .recent-blogs {
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 20px;
+  }
+
+  .featured-blogs {
+    display: block; /* Stack featured blogs vertically */
+  }
+
+  .blog-card {
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+
+  .blog-card:hover {
+    transform: none; /* Disable hover effect for mobile */
+    box-shadow: none;
+    margin: 0;
+    background-color: transparent;
+  }
+
+  .blog-image img {
+    height: auto; /* Allow images to scale naturally */
+  }
+
+  .recent .blog-image img {
+    height: auto; /* Adjust height for recent blogs */
+  }
+
+  .blog-title {
+    font-size: 18px; /* Adjust font size for titles */
+  }
+
+  .blog-excerpt {
+    font-size: 14px; /* Adjust font size for excerpts */
+  }
+
+  /* Footer */
+  footer {
+    padding: 30px 5%; /* Reduce padding for mobile */
+  }
+
+  .footer-content {
+    flex-direction: column; /* Stack footer sections vertically */
+    gap: 20px;
+  }
+
+  .footer-left {
+    margin-bottom: 20px;
+  }
+
+  .footer-right {
+    flex-direction: column; /* Stack links and subscribe vertically */
+    gap: 20px;
+  }
+
+  .footer-links ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .footer-bottom {
+    font-size: 12px; /* Smaller font size for footer text */
+  }
+
+  /* Blog Post Page */
+  .blog-post {
+    padding: 20px 5%; /* Reduce padding for mobile */
+  }
+
+  .blog-post-header .blog-title {
+    font-size: 28px; /* Adjust font size for blog post titles */
+  }
+
+  .blog-post-content {
+    font-size: 16px; /* Adjust font size for content */
+  }
+
+  .blog-post-footer {
+    flex-direction: column; /* Stack footer sections vertically */
+    gap: 20px;
+  }
+
+  .blog-post-tags {
+    justify-content: flex-start; /* Align tags to the left */
+  }
+
+  .share-buttons {
+    justify-content: flex-start; /* Align share buttons to the left */
+  }
+}
+
+/* Very small screens (max-width: 480px) */
+@media (max-width: 480px) {
+  /* Header */
+  header {
+    padding: 15px 5%;
+  }
+
+  .logo {
+    font-size: 20px; /* Smaller logo font size */
+  }
+
+  nav ul li {
+    margin-right: 15px; /* Reduce spacing between nav items */
+  }
+
+  /* Welcome Section */
+  .welcome-section h2 {
+    font-size: 20px; /* Further reduce font size */
+  }
+
+  /* Blog Cards */
+  .blog-title {
+    font-size: 16px; /* Smaller font size for titles */
+  }
+
+  .blog-excerpt {
+    font-size: 12px; /* Smaller font size for excerpts */
+  }
+
+  /* Footer */
+  footer {
+    padding: 20px 5%; /* Further reduce padding */
+  }
+
+  .footer-content {
+    gap: 15px; /* Reduce spacing between footer sections */
+  }
+}

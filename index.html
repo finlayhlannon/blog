@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fin's Blog</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <h1 class="logo"><a href="/">Fin's Blog</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="/" class="nav-link active" data-path="/">All articles</a></li>
+                    <li><a href="/athletics" class="nav-link" data-path="/athletics">Athletics</a></li>
+                    <li><a href="/academics" class="nav-link" data-path="/academics">Academics</a></li>
+                    <li><a href="/hobbies" class="nav-link" data-path="/hobbies">Hobbies</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-right">
+            <button class="subscribe-btn">Subscribe</button>
+        </div>
+    </header>
+    <main id="app">
+        <!-- Content will be dynamically loaded here -->
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <h3>Fin's Blog</h3>
+                <p>Sharing my thoughts, experiences, and insights.</p>
+            </div>
+            <div class="footer-right">
+                <div class="footer-links">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="/" class="nav-link">All articles</a></li>
+                        <li><a href="/athletics" class="nav-link">Athletics</a></li>
+                        <li><a href="/academics" class="nav-link">Academics</a></li>
+                        <li><a href="/hobbies" class="nav-link">Hobbies</a></li>
+                    </ul>
+                </div>
+                <div class="footer-subscribe">
+                    <h4>Stay Updated</h4>
+                    <button class="subscribe-btn">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Fin's Blog. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- Templates -->
+    <template id="home-template">
+        <div class="welcome-section">
+            <h2>Welcome to Finlay Hlannon's blog. Find out what I'm working on and what I've been doing</h2>
+            <div class="separator"></div>
+        </div>
+        <div class="blog-container">
+            <div class="featured-section">
+                <h3>Featured</h3>
+                <div class="featured-blogs" id="featured-blogs-container">
+                    <!-- Featured blogs will be dynamically loaded here -->
+                </div>
+            </div>
+            <div class="recent-section">
+                <h3>Recent</h3>
+                <div class="recent-blogs" id="recent-blogs-container">
+                    <!-- Recent blogs will be dynamically loaded here -->
+                </div>
+            </div>
+        </div>
+    </template>
+    <template id="blog-card-featured">
+        <div class="blog-card featured">
+            <div class="blog-image">
+                <img src="/placeholder.svg" alt="Featured blog post">
+            </div>
+            <div class="separator"></div>
+            <div class="blog-meta">
+                <span class="blog-category"></span>
+                <span class="blog-date"></span>
+            </div>
+            <h4 class="blog-title"></h4>
+            <p class="blog-excerpt"></p>
+        </div>
+    </template>
+    <template id="blog-card-recent">
+        <div class="blog-card recent">
+            <div class="blog-image">
+                <img src="/placeholder.svg" alt="Recent blog post">
+            </div>
+            <div class="separator"></div>
+            <div class="blog-meta">
+                <span class="blog-category"></span>
+                <span class="blog-date"></span>
+            </div>
+            <h4 class="blog-title"></h4>
+            <p class="blog-excerpt"></p>
+        </div>
+    </template>
+    <template id="category-template">
+        <div class="category-page">
+            <div class="welcome-section">
+                <h2 class="category-title"></h2>
+                <div class="separator"></div>
+            </div>
+            <div class="category-blogs" id="category-blogs-container">
+                <!-- Category blogs will be inserted here -->
+            </div>
+        </div>
+    </template>
+    <template id="blog-post-template">
+        <div class="blog-post">
+            <div class="blog-post-header">
+                <div class="blog-meta">
+                    <span class="blog-category"></span>
+                    <span class="blog-date"></span>
+                </div>
+                <h1 class="blog-title"></h1>
+            </div>
+            <div class="blog-post-image">
+                <img src="/placeholder.svg" alt="Blog post image">
+            </div>
+            <div class="blog-post-content"></div>
+            <div class="blog-post-footer">
+                <div class="blog-post-tags"></div>
+                <!--div class="blog-post-share">
+                    <h4>Share this post</h4>
+                    <div class="share-buttons">
+                        <a class="twitter-share-button"
+                        href="https://twitter.com/intent/tweet?text=Hello%20world">
+                        Tweet</a>
+                        <button>Facebook</button>
+                        <button>LinkedIn</button>
+                    </div>
+                </div-->
+            </div>
+        </div>
+    </template>
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
