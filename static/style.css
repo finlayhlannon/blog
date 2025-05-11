@@ -40,6 +40,19 @@ header {
   align-items: center;
 }
 
+/* Profile Icon */
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.profile-icon:hover {
+    transform: scale(1.1);
+}
+
 .logo {
   font-size: 24px;
   font-weight: bold;
@@ -359,6 +372,85 @@ footer {
   text-align: center;
   padding-top: 20px;
   border-top: 1px solid #eee;
+}
+
+/* Auth Page */
+.auth-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.auth-container h1 {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.auth-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.auth-btn:hover {
+    background-color: #333;
+}
+
+/* Toggle link */
+#toggle-auth-mode {
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+#toggle-auth-mode a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#toggle-auth-mode a:hover {
+    text-decoration: underline;
+}
+
+/* User name in header */
+.user-name {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.user-name:hover {
+    color: #555;
 }
 
 /* Responsive design */
