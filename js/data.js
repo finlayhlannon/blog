@@ -43,6 +43,20 @@ const blogData = [
     isFeatured: false,
     tags: ["photography", "track", "hobbies", "camera"],
   },
+  {
+    id: "track",
+    title: "2025 Track and Field - Updates",
+    slug: "track",
+    category: "ATHLETICS",
+    date: new Date("2025-04-02"),
+    image: "static/img/track.png",
+    excerpt: "Updates and results for the 2025 High School Track and Field season!",
+    content: `
+        <p></p>
+    `,
+    isFeatured: false,
+    tags: ["track and field", "sports", "race"],
+  },
   
 ]
 
