@@ -26,7 +26,7 @@ const blogData = [
     content: `
         <p></p>
     `,
-    isFeatured: false,
+    isFeatured: true,
     tags: ["running", "fitness", "tc10k", "race"],
   },
   {
@@ -56,6 +56,20 @@ const blogData = [
     `,
     isFeatured: false,
     tags: ["track and field", "sports", "race"],
+  },
+  {
+    id: "podcast",
+    title: "2025 NYT Podcast Contest",
+    slug: "podcast",
+    category: "ACADEMICS",
+    date: new Date("2025-05-11"),
+    image: "static/img/podcast.png",
+    excerpt: "Find out about New York Times podcast contest I'm currently working on!",
+    content: `
+        <p></p>
+    `,
+    isFeatured: false,
+    tags: ["podcast", "contest", "nyt"],
   },
   
 ]
