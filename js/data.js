@@ -81,11 +81,16 @@ const blogData = [
     title: "NYT Podcast Contest",
     slug: "podcast",
     category: "ACADEMICS",
-    date: new Date("2025-05-11"),
+    date: new Date("2025-05-12"),
     image: "static/img/podcast.png",
     excerpt: "Find out about what I'm working on for the 2025 New York Times podcast contest!",
     content: `
-        <p>May 4th, 2025 - I found out about the NYT annual podcast contest./p>
+        <p>If you are not aware, just as I was, New York Times hosts an annual podcast contest for teens aged 13-19, and basically you make a podcast about whatever you want and hope and pray that the judges think its good. I found out about this contest, read exactly that, and signed up immediately.</p>
+        <p>May 4th, 2025 - I found out podcast contest. 10 days until the due date.</p>
+        <p>May 12, 2025 - I actually started working on it. It is now a mere 2 days until the due date.</p>
+        <p>I really should have started earlier...</p>
+        <p>But I didn't! And that wont stop me! So welcome to how exactly I am going to create this podcast in 48 hours.</p>
+        <p>i haven't started yet...  come back later :)</p>
     `,
     isFeatured: false,
     tags: ["podcast", "contest", "nyt"],
