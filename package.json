@@ -1,5 +1,11 @@
 {
+  "name": "blog",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node js/test.js"
+  },
   "dependencies": {
-    "@vercel/blob": "^1.0.1"
+    "@vercel/blob": "^1.0.0"
   }
 }

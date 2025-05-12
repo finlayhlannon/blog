@@ -1,0 +1,13 @@
+{
+  "blob": [
+    {
+      "0": {
+        "name": "Test User",
+        "email": "test@example.com",
+        "password": "password123",
+        "role": "user"
+      },
+      "id": "920e"
+    }
+  ]
+}

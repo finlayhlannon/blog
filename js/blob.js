@@ -1,25 +1,34 @@
 import { put } from "@vercel/blob";
 
-// Save users to the blob
+const API_BASE_URL = "https://finlay.vercel.app/api/blob"; // Vercel serverless function URL
+
+// Save users to the blob via the serverless function
 export async function saveUsersToBlob(users) {
     try {
-        const jsonData = JSON.stringify(users); // Convert users array to JSON
-        const { url } = await put("users/blob.json", jsonData, { access: "public" });
-        console.log("Users saved to blob:", url);
-        return url; // The public URL of the blob
+        const response = await fetch(API_BASE_URL, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ users }),
+        });
+        if (!response.ok) {
+            throw new Error("Failed to save users to blob");
+        }
+        const data = await response.json();
+        console.log("Users saved to blob:", data.url);
+        return data.url;
     } catch (error) {
         console.error("Error saving users to blob:", error);
     }
 }
 
-// Fetch users from the blob
+// Fetch users from the blob via the serverless function
 export async function fetchUsersFromBlob() {
     try {
-        const response = await fetch("https://<your-vercel-blob-url>/users/blob.json");
+        const response = await fetch(API_BASE_URL);
         if (!response.ok) {
             throw new Error("Failed to fetch users from blob");
         }
-        const users = await response.json(); // Parse JSON data
+        const users = await response.json();
         console.log("Users fetched from blob:", users);
         return users;
     } catch (error) {
