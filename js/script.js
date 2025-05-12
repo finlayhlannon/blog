@@ -1,41 +1,16 @@
+
 // Wait for the DOM to be fully loaded
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("DOM loaded - initializing blog");
-
-    // Check if a user is logged in
-    const currentUser = JSON.parse(localStorage.getItem("currentUser"));
-    const profileIcon = document.getElementById("profile-icon");
-    const headerRight = document.querySelector(".header-right");
-    const signOutBtn = document.getElementById("sign-out-btn");
-
-    if (currentUser) {
-        // Replace profile icon with user's name
-        const userNameElement = document.createElement("span");
-        userNameElement.textContent = currentUser.name;
-        userNameElement.classList.add("user-name");
-        headerRight.replaceChild(userNameElement, profileIcon);
-
-        // Show the "Sign Out" button
-        signOutBtn.style.display = "inline-block";
-
-        // Add sign-out functionality
-        signOutBtn.addEventListener("click", () => {
-            localStorage.removeItem("currentUser");
-            alert("You have been signed out.");
-            window.location.href = "signin.html";
-        });
-    } else {
-        // Redirect to sign-in page on profile icon click
-        profileIcon.addEventListener("click", () => {
-            window.location.href = "signin.html";
-        });
-    }
-
-    // Initialize the blog
-    initBlog();
-
-    // Set up event listeners for UI interactions
-    setupUIEventListeners();
+  console.log("DOM loaded - initializing blog");
+  
+  // Remove the mock blogs array and use blogData from data.js
+  // Remove the duplicate event listeners
+  
+  // Initialize the blog
+  initBlog();
+  
+  // Set up event listeners for UI interactions
+  setupUIEventListeners();
 });
 
 // Initialize the blog
