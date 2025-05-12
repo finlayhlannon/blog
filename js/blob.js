@@ -1,6 +1,6 @@
 import { put } from "@vercel/blob";
 
-const API_BASE_URL = "https://finlay.vercel.app/api/blob"; // Vercel serverless function URL
+const API_BASE_URL = "/api/blob"; // Vercel serverless function URL
 
 // Save users to the blob via the serverless function
 export async function saveUsersToBlob(users) {
