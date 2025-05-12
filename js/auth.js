@@ -1,3 +1,5 @@
+import { addUserToBlob, fetchUsersFromBlob } from "./blob.js";
+
 document.addEventListener("DOMContentLoaded", () => {
     const authForm = document.getElementById("auth-form");
     const nameGroup = document.getElementById("name-group");
@@ -23,17 +25,13 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Store users in localStorage
-    const users = JSON.parse(localStorage.getItem("users")) || [];
-
-    const opList = JSON.parse(localStorage.getItem("opList")) || []; // Load OP list from localStorage
-
-    authForm.addEventListener("submit", (e) => {
+    authForm.addEventListener("submit", async (e) => {
         e.preventDefault();
 
         const name = document.getElementById("name").value.trim();
         const email = document.getElementById("email").value.trim();
         const password = document.getElementById("password").value.trim();
+        const isOp = confirm("Should this user have OP privileges?");
 
         if (!email || !password) {
             alert("Email and password are required!");
@@ -41,42 +39,21 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         if (isSignUpMode) {
-            // Sign Up logic
-            if (!name) {
-                alert("Name is required for sign-up!");
-                return;
-            }
-
-            const existingUser = users.find((user) => user.email === email);
-            if (existingUser) {
-                alert("User already exists. Please sign in.");
-                return;
-            }
-
-            // Add new user
-            const newUser = { name, email, password, role: "user" }; // Default role is "user"
-            users.push(newUser);
-
-            // Check if the email should be added to the OP list
-            if (confirm("Should this user have OP privileges?")) {
-                newUser.role = "op";
-                opList.push(email);
-                localStorage.setItem("opList", JSON.stringify(opList));
-            }
-
-            localStorage.setItem("users", JSON.stringify(users));
-            localStorage.setItem("currentUser", JSON.stringify(newUser));
+            // Sign-Up logic
+            const newUser = { name, email, password, role: isOp ? "op" : "user" };
+            await addUserToBlob(newUser);
             alert("Sign-up successful!");
         } else {
-            // Sign In logic
+            // Sign-In logic
+            const users = await fetchUsersFromBlob();
             const existingUser = users.find((user) => user.email === email && user.password === password);
+
             if (!existingUser) {
                 alert("Invalid email or password. Please try again.");
                 return;
             }
 
-            localStorage.setItem("currentUser", JSON.stringify(existingUser));
-            alert("Sign-in successful!");
+            alert(`Welcome back, ${existingUser.name}!`);
         }
 
         // Redirect to home page
