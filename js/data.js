@@ -9,8 +9,14 @@ const blogData = [
     image: "static/img/howards.png",
     excerpt: "Currently working on a project where you order a coffee by texting a cafe instead of ordering online.",
     content: `
-      <p></p>
-
+      <p>For the final term of AP Computer Science, our class had an ambitious idea. We were going to build an app that takes in text messages from customers and automatically places their orders at our school’s cafe.</p>
+      <p>This project involves significant technical challenges, such as handling SMS messages, using AI to turn conversations into structured orders, managing user accounts, and much more. It was exciting, and for a while, our class was fully invested in bringing the idea to life.</p>
+      <p>But as AP exams approached, priorities shifted. Stacks of code were replaced by stacks of notes, and slowly, the energy around the project started to fade.</p>
+      <p>But not for me.</p> 
+      <p>Alongside a few other dedicated classmates, I continued working—both during school hours and outside of them—to keep this project alive. We refused to let the idea die with the shift in class focus. Through persistence and a lot of trial and error, we’ve made incredible progress. While there are still hundreds of bugs to squash, dozens of features to build, and more than a few seemingly impossible problems to solve, we’re pushing through. We're in the final sprint.</p>
+      <p>Finishing this project will be a major breakthrough. From a personal standpoint, this full-stack, hands-on experience is one of the most ambitious development projects I’ve taken on. The combination of deep technical problem-solving and the need for strong collaboration has pushed me to grow as both a developer and a teammate. I know this will leave me better prepared for future, more complex projects.</p>
+      <p>Looking at the community impact, completing this app could be a game-changer. I’ve experienced firsthand how frustrating the cafe lines can be. With a working SMS ordering system, not only will wait times for users drop significantly, but so will the lines for everyone else. The cafe staff will benefit, too—receiving clear, organized orders and being able to serve customers more efficiently.</p>
+      <p>We’re close. And we’re not giving up.</p>
     `,
     isFeatured: true,
     tags: ["coding", "app", "development"],
@@ -24,7 +30,20 @@ const blogData = [
     image: "static/img/tc10k4.png",
     excerpt: "36th Annual Times Colonist 10k - My 2nd time running the TC10k, and my first time going sub 40 officially with a time of 39:19",
     content: `
-        <p></p>
+        <p>In the summer of 2023, I ran my first ever 10k.</p>
+        <p>With a time of 47:something, I was hooked. I thought I'd finish in well over an hour and I'd want to sleep for the next 3 days, but I was more alive than ever! I was so energized and ready to run 3 more right then and there.</p>
+        <p>After that, I started to run more and more. I would wake up before school and go, go right after school, go in between sports, whenever I could find time. I even ran in the 30 degree mornings during our vacation in mexico.</p>
+        <p>Once I heard about the Times Colonist 10k in 2024, I knew I had to run it. So I signed up immediately.</p>
+        <p>That race was, at the time, the fastest 10k I had run. I came in at 41:34, after never even breaking 43:00 before. I was possessed by the energy of the whole thing, and I signed up for the next year right then and there.</p>
+        <p>That year was this year.</p>
+        <p>I knew I could break 40 minutes. I had already broken 40 in training, and I knew that the energy of the race would only make me faster.</p>
+        <p>I was so set...except for my injuries.</p>
+        <p>Being in the middle of my Track and Field season, my shins were splinted like they've never before, my hips were those of a 100 year old grandfather, and my knees were just there to make everything worse.</p>
+        <p>HOWEVER!</p>
+        <p>Am I a quitter? No.</p>
+        <p>Am I going accept that I'm broken give up? Absolutley not.</p>
+        <p>Am I going to push through and get that sub 40 I have trained so hard for? One hundred percent yes!</p>
+        <p>And that is exactly what I did. I finished with a time of 39:19. It wasn’t easy, and it definitely wasn’t painless—but it was worth every step. Breaking 40 had been my goal for over a year, and now that I’ve done it, I’m more motivated than ever. This is just the beginning.</p>
     `,
     isFeatured: true,
     tags: ["running", "fitness", "tc10k", "race"],
@@ -66,10 +85,10 @@ const blogData = [
     image: "static/img/podcast.png",
     excerpt: "Find out about what I'm working on for the 2025 New York Times podcast contest!",
     content: `
-        <p></p>
+        <p>May 4th, 2025 - I found out about the NYT annual podcast contest./p>
     `,
     isFeatured: false,
-    tags: ["track and field", "sports", "race"],
+    tags: ["podcast", "contest", "nyt"],
   },
   {
     id: "blog",
