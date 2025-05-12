@@ -26,7 +26,7 @@ const blogData = [
     content: `
         <p></p>
     `,
-    isFeatured: false,
+    isFeatured: true,
     tags: ["running", "fitness", "tc10k", "race"],
   },
   {
@@ -56,6 +56,34 @@ const blogData = [
     `,
     isFeatured: false,
     tags: ["track and field", "sports", "race"],
+  },
+  {
+    id: "podcast",
+    title: "NYT Podcast Contest",
+    slug: "podcast",
+    category: "ACADEMICS",
+    date: new Date("2025-05-11"),
+    image: "static/img/podcast.png",
+    excerpt: "Find out about what I'm working on for the 2025 New York Times podcast contest!",
+    content: `
+        <p></p>
+    `,
+    isFeatured: false,
+    tags: ["track and field", "sports", "race"],
+  },
+  {
+    id: "blog",
+    title: "This Blog Website Itself",
+    slug: "blog",
+    category: "HOBBIES",
+    date: new Date("2025-05-09"),
+    image: "static/img/blog.png",
+    excerpt: "This blog website, the one you're currently on, is actually something I have been working on coding.",
+    content: `
+        <p></p>
+    `,
+    isFeatured: false,
+    tags: ["development", "coding", "blog"],
   },
   
 ]
