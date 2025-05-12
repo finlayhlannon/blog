@@ -26,6 +26,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // Store users in localStorage
     const users = JSON.parse(localStorage.getItem("users")) || [];
 
+    const opList = JSON.parse(localStorage.getItem("opList")) || []; // Load OP list from localStorage
+
     authForm.addEventListener("submit", (e) => {
         e.preventDefault();
 
@@ -52,8 +54,16 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             // Add new user
-            const newUser = { name, email, password };
+            const newUser = { name, email, password, role: "user" }; // Default role is "user"
             users.push(newUser);
+
+            // Check if the email should be added to the OP list
+            if (confirm("Should this user have OP privileges?")) {
+                newUser.role = "op";
+                opList.push(email);
+                localStorage.setItem("opList", JSON.stringify(opList));
+            }
+
             localStorage.setItem("users", JSON.stringify(users));
             localStorage.setItem("currentUser", JSON.stringify(newUser));
             alert("Sign-up successful!");

@@ -453,6 +453,22 @@ footer {
     color: #555;
 }
 
+.sign-out-btn {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.sign-out-btn:hover {
+    background-color: #333;
+}
+
 /* Responsive design */
 @media (max-width: 1024px) {
   .blog-container {

@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const currentUser = JSON.parse(localStorage.getItem("currentUser"));
     const profileIcon = document.getElementById("profile-icon");
     const headerRight = document.querySelector(".header-right");
+    const signOutBtn = document.getElementById("sign-out-btn");
 
     if (currentUser) {
         // Replace profile icon with user's name
@@ -13,8 +14,18 @@ document.addEventListener("DOMContentLoaded", () => {
         userNameElement.textContent = currentUser.name;
         userNameElement.classList.add("user-name");
         headerRight.replaceChild(userNameElement, profileIcon);
+
+        // Show the "Sign Out" button
+        signOutBtn.style.display = "inline-block";
+
+        // Add sign-out functionality
+        signOutBtn.addEventListener("click", () => {
+            localStorage.removeItem("currentUser");
+            alert("You have been signed out.");
+            window.location.href = "signin.html";
+        });
     } else {
-        // Redirect to sign-in/sign-up page on profile icon click
+        // Redirect to sign-in page on profile icon click
         profileIcon.addEventListener("click", () => {
             window.location.href = "signin.html";
         });
