@@ -57,7 +57,18 @@ const blogData = [
     image: "static/img/highjump.png",
     excerpt: "View a showcase of my recent photos as well as the stories behind them.",
     content: `
+        <p><h2>Track and Field Photos</h2></p>
         <p><img src="static/img/polevault.png" alt="Photo 1" width="500px"></p>
+        <p>Martin Winnett moments before clearing over 3 meters, placing him first in cities, and securing a new PB.<br></p>
+        <p><br></p>
+        <p><img src="static/img/track.png" alt="Photo 2" width="500px"></p>
+        <p>Adam Zilber gapping everyone else in his 400m heat by at least 50m, placing him first.<br></p>
+        <p><br></p>
+        <p><img src="static/img/highjump.png" alt="Photo 3" width="500px"></p>
+        <p>Tommy Hong clearing an impressive height to come in first place at the first track meet of the season.<br></p>
+        <p><br></p>
+        <p><img src="static/img/race.jpg" alt="Photo 4" width="500px"></p>
+        <p>Tommy Hong starting the 200m race strong in the second furthest lane.</p>
     `,
     isFeatured: false,
     tags: ["photography", "track", "hobbies", "camera"],
