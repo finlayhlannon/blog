@@ -67,7 +67,7 @@ const blogData = [
         <p><img src="static/img/highjump.png" alt="Photo 3" width="60%"></p>
         <p>Tommy Hong clearing an impressive height to come in first place at the first track meet of the season.<br></p>
         <p><br></p>
-        <p><img src="static/img/race.jpg" alt="Photo 4" width="60%"></p>
+        <p><img src="static/img/race.png" alt="Photo 4" width="60%"></p>
         <p>Tommy Hong starting the 200m race strong in the second furthest lane.</p>
     `,
     isFeatured: false,
