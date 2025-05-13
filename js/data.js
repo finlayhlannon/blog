@@ -130,7 +130,7 @@ const blogData = [
     excerpt: "This blog website, the one you're currently on, is actually something I have been working on coding.",
     content: `
         <p>This blog website itslelf, yes, the one that you are currently on, was fully designed and developed by me alone.<br></p>
-        <p>Coding has always been a passion of mine, and in the past few years I have found an interest in web development and everything that comes with building websites like these. Yes, I am aware that this is a dying hobby/job and that there is no market for it whatsoever, but I do it purely out of personal interest and to learn as much as I can before AI fully takes all of this over. I hope you like the blog!</p>
+        <p>Coding has always been a passion of mine, and in the past few years I have found an interest in web development and everything that comes with building websites like these. Yes, I am aware that this is a dying hobby/job and that there is no market for it whatsoever, but I do it purely out of personal interest and to learn as much as I can before AI fully takes all of this over. I hope you like it!</p>
     `,
     isFeatured: false,
     tags: ["development", "coding", "blog"],
