@@ -82,6 +82,20 @@ const blogData = [
     image: "static/img/track.png",
     excerpt: "Updates and results for the 2025 High School Track and Field season!",
     content: `
+        <p><h2>Track and Field lower island league meet results</h2></p>
+        <p>(no, that is not me in the photo, however I did take that photo)<br></p>
+        <p><br></p>
+        <p>April 2nd and 9th</p>
+        <p>I jumped 10.76m in the first triple jump competition of the season, placing me in 3rd place. A height of 2.50m in pole vault placed me in 2nd, behind my teammate Martin Winnett. I also ran the 400m hurdles for the first time as a senior, and placed 3rd with a time of 1:10:08.</p>
+        <p><br></p>
+        <p>April 16th and 23rd</p>
+        <p>For the second week of pole vault, I did not do as well, finishing with a height of 2.30m for a dissapointing 4th place. I also participated in long jump, getting a distance of 4.81m.</p>
+        <p><br></p>
+        <p>April 30th and May 7th</p>
+        <p>In the final league meets, I got a personal best in pole vault with a height of 2.70, and I also broke 11m for triple jump for the first time this season.</p>
+        <p><br></p>
+        <p>I am looking forward to Lower Island and Island Championships coming up! Hopefully I qualify for provincials again this year!</p>
+        <p></p>
         <p></p>
     `,
     isFeatured: false,
@@ -115,7 +129,8 @@ const blogData = [
     image: "static/img/blog.png",
     excerpt: "This blog website, the one you're currently on, is actually something I have been working on coding.",
     content: `
-        <p></p>
+        <p>This blog website itslelf, yes, the one that you are currently on, was fully designed and developed by me alone.<br></p>
+        <p>Coding has always been a passion of mine, and in the past few years I have found an interest in web development and everything that comes with building websites like these. Yes, I am aware that this is a dying hobby/job and that there is no market for it whatsoever, but I do it purely out of personal interest and to learn as much as I can before AI fully takes all of this over. I hope you like the blog!</p>
     `,
     isFeatured: false,
     tags: ["development", "coding", "blog"],
